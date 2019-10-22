@@ -13,6 +13,7 @@
 		A865B823235F9F86003D518D /* itunes_list.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A865B821235F9F86003D518D /* itunes_list.xcdatamodeld */; };
 		A865B825235F9F88003D518D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A865B824235F9F88003D518D /* Assets.xcassets */; };
 		A865B828235F9F88003D518D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A865B826235F9F88003D518D /* LaunchScreen.storyboard */; };
+		A865B833235FA37F003D518D /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = A865B832235FA37F003D518D /* Album.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A865B824235F9F88003D518D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A865B827235F9F88003D518D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A865B829235F9F88003D518D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A865B832235FA37F003D518D /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,40 @@
 		A865B819235F9F86003D518D /* itunes_list */ = {
 			isa = PBXGroup;
 			children = (
-				A865B81A235F9F86003D518D /* AppDelegate.swift */,
-				A865B81C235F9F86003D518D /* ViewController.swift */,
-				A865B81E235F9F86003D518D /* Main.storyboard */,
-				A865B824235F9F88003D518D /* Assets.xcassets */,
-				A865B826235F9F88003D518D /* LaunchScreen.storyboard */,
 				A865B829235F9F88003D518D /* Info.plist */,
-				A865B821235F9F86003D518D /* itunes_list.xcdatamodeld */,
+				A865B824235F9F88003D518D /* Assets.xcassets */,
+				A865B831235FA32C003D518D /* Model */,
+				A865B830235FA31E003D518D /* View */,
+				A865B82F235FA30F003D518D /* Controller */,
 			);
 			path = itunes_list;
+			sourceTree = "<group>";
+		};
+		A865B82F235FA30F003D518D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A865B81A235F9F86003D518D /* AppDelegate.swift */,
+				A865B81C235F9F86003D518D /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A865B830235FA31E003D518D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A865B81E235F9F86003D518D /* Main.storyboard */,
+				A865B826235F9F88003D518D /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A865B831235FA32C003D518D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A865B821235F9F86003D518D /* itunes_list.xcdatamodeld */,
+				A865B832235FA37F003D518D /* Album.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +168,7 @@
 				A865B823235F9F86003D518D /* itunes_list.xcdatamodeld in Sources */,
 				A865B81D235F9F86003D518D /* ViewController.swift in Sources */,
 				A865B81B235F9F86003D518D /* AppDelegate.swift in Sources */,
+				A865B833235FA37F003D518D /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
