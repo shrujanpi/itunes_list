@@ -68,7 +68,7 @@ struct Service {
                         _album.thumbnail = _artworkUrl100
                         _album.genre = genre
                         _album.releaseDate = _releaseDate
-                        _album.albumName = _url
+                        _album.iTunesLink = _url
                         _album.copyrightInfo = _copyright
                     }
                     

@@ -9,6 +9,10 @@
 import UIKit
 
 class TableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var imgArtwork: UIImageView!
+    @IBOutlet weak var lblArtist: UILabel!
+    @IBOutlet weak var lblAlbum: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

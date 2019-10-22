@@ -20,10 +20,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        self.title = "Albums"
-        //Get the user data from App Service
+        self.configureViews()
         
         Service.fetchAppDetails { (albumDetails) -> Void in
             
@@ -33,6 +30,11 @@ class HomeViewController: UIViewController {
             }
         }
     }
+    
+    fileprivate func configureViews() {
+        self.title = "Albums"
+        self.tableView.tableFooterView = UIView()
+    }
 }
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
@@ -41,8 +43,26 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell") as! TableViewCell
+        
+        cell.lblAlbum.text = self.albumsArray[indexPath.row].albumName
+        cell.lblArtist.text = self.albumsArray[indexPath.row].artistName
+        
+        let activityIndicator = UIActivityIndicatorView()
+        activityIndicator.frame = cell.imgArtwork.bounds
+        
+        if let thumbnailUrl = self.albumsArray[indexPath.row].thumbnail {
+            
+            if let _url = NSURL(string:thumbnailUrl) as URL? {
+                if let imgData = NSData(contentsOf: _url) {
+                    if let imageToLoad = UIImage(data: imgData as Data) {
+                        cell.imgArtwork.image = imageToLoad
+                    }
+                }
+            }
+        }
+        
+        return cell
     }
-    
-    
 }
