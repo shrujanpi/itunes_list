@@ -65,4 +65,11 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyBoard = UIStoryboard(name: "Main", bundle:nil)
+        let detailsVC = storyBoard.instantiateViewController(withIdentifier: "AlbumDetailsViewController") as! AlbumDetailsViewController
+        detailsVC.album = self.albumsArray[indexPath.row]
+        self.navigationController?.pushViewController(detailsVC, animated:true)
+    }
 }
