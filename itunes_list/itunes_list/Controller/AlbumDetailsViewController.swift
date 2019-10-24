@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import MediaPlayer
 
-class AlbumDetailsViewController: UIViewController {
+class AlbumDetailsViewController: BaseViewController, MPMediaPickerControllerDelegate {
+    
+    @IBOutlet weak var contentView: UIView!
     
     var album = Album() {
         didSet {
@@ -43,10 +46,26 @@ class AlbumDetailsViewController: UIViewController {
     @IBOutlet weak var btnOpen: UIButton!
     
     @IBAction func btnOpeniTunes(_ sender: Any) {
+//        let mediaPicker = MPMediaPickerController(mediaTypes: .music)
+//        mediaPicker.delegate = self
+//        present(mediaPicker, animated: true, completion: {})
+    
+//        let mediaPlayer = MPMusicPlayerController.applicationMusicPlayer
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configureViews()
+        
+        
+    }
+    
+    fileprivate func configureViews() {
+        self.createGradientLayer(forView: self.view)
+        self.styleNavigationBar()
+        
+        self.contentView.layer.zPosition = 1.0
+        self.btnOpen.layer.cornerRadius = 15.0
     }
 }

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A81E033D235FAA7C001AED3E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81E033C235FAA7C001AED3E /* TableViewCell.swift */; };
+		A8518EFC2360DBD40098344A /* CAGradientLayer+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8518EFB2360DBD40098344A /* CAGradientLayer+Util.swift */; };
+		A8518EFE2360DF3A0098344A /* CAGradientLayer+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8518EFD2360DF3A0098344A /* CAGradientLayer+Utils.swift */; };
+		A8518F002360E44D0098344A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8518EFF2360E44D0098344A /* BaseViewController.swift */; };
 		A865B81B235F9F86003D518D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A865B81A235F9F86003D518D /* AppDelegate.swift */; };
 		A865B81D235F9F86003D518D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A865B81C235F9F86003D518D /* HomeViewController.swift */; };
 		A865B820235F9F86003D518D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A865B81E235F9F86003D518D /* Main.storyboard */; };
@@ -23,6 +26,9 @@
 
 /* Begin PBXFileReference section */
 		A81E033C235FAA7C001AED3E /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		A8518EFB2360DBD40098344A /* CAGradientLayer+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+Util.swift"; sourceTree = "<group>"; };
+		A8518EFD2360DF3A0098344A /* CAGradientLayer+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+Utils.swift"; sourceTree = "<group>"; };
+		A8518EFF2360E44D0098344A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		A865B817235F9F86003D518D /* itunes_list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = itunes_list.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A865B81A235F9F86003D518D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A865B81C235F9F86003D518D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -68,7 +74,7 @@
 		A865B819235F9F86003D518D /* itunes_list */ = {
 			isa = PBXGroup;
 			children = (
-				A865B837235FA7EF003D518D /* Services */,
+				A865B837235FA7EF003D518D /* Services+Utils */,
 				A865B829235F9F88003D518D /* Info.plist */,
 				A865B824235F9F88003D518D /* Assets.xcassets */,
 				A865B831235FA32C003D518D /* Model */,
@@ -84,6 +90,7 @@
 				A865B81A235F9F86003D518D /* AppDelegate.swift */,
 				A865B81C235F9F86003D518D /* HomeViewController.swift */,
 				A8B22766235FE73C00C0DFD1 /* AlbumDetailsViewController.swift */,
+				A8518EFF2360E44D0098344A /* BaseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -107,14 +114,16 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		A865B837235FA7EF003D518D /* Services */ = {
+		A865B837235FA7EF003D518D /* Services+Utils */ = {
 			isa = PBXGroup;
 			children = (
 				A865B835235FA615003D518D /* NetworkManager.swift */,
 				A865B838235FA80E003D518D /* Service.swift */,
 				A8B22764235FBCED00C0DFD1 /* UIImageView+Util.swift */,
+				A8518EFB2360DBD40098344A /* CAGradientLayer+Util.swift */,
+				A8518EFD2360DF3A0098344A /* CAGradientLayer+Utils.swift */,
 			);
-			path = Services;
+			path = "Services+Utils";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,10 +198,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A865B823235F9F86003D518D /* itunes_list.xcdatamodeld in Sources */,
+				A8518EFC2360DBD40098344A /* CAGradientLayer+Util.swift in Sources */,
 				A865B81D235F9F86003D518D /* HomeViewController.swift in Sources */,
 				A865B836235FA615003D518D /* NetworkManager.swift in Sources */,
 				A865B81B235F9F86003D518D /* AppDelegate.swift in Sources */,
+				A8518F002360E44D0098344A /* BaseViewController.swift in Sources */,
 				A865B833235FA37F003D518D /* Album.swift in Sources */,
+				A8518EFE2360DF3A0098344A /* CAGradientLayer+Utils.swift in Sources */,
 				A81E033D235FAA7C001AED3E /* TableViewCell.swift in Sources */,
 				A8B22765235FBCED00C0DFD1 /* UIImageView+Util.swift in Sources */,
 				A8B22767235FE73C00C0DFD1 /* AlbumDetailsViewController.swift in Sources */,
