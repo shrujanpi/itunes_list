@@ -46,19 +46,19 @@ class AlbumDetailsViewController: BaseViewController, MPMediaPickerControllerDel
     @IBOutlet weak var btnOpen: UIButton!
     
     @IBAction func btnOpeniTunes(_ sender: Any) {
-//        let mediaPicker = MPMediaPickerController(mediaTypes: .music)
-//        mediaPicker.delegate = self
-//        present(mediaPicker, animated: true, completion: {})
-    
-//        let mediaPlayer = MPMusicPlayerController.applicationMusicPlayer
-        
+        if let link = self.album.iTunesLink {
+//            let linkArray = link.components(separatedBy: "/")
+//            let linkString = link.replacingOccurrences(of: linkArray.last!, with: "")
+            if let url =  URL(string: link) {
+                print("link is \(link)")
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureViews()
-        
-        
     }
     
     fileprivate func configureViews() {
